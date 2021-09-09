@@ -1,4 +1,6 @@
 # flutter-version-number-action
+[![Test](https://github.com/NiklasLehnfeld/flutter-version-number-action/actions/workflows/main.yaml/badge.svg)](https://github.com/NiklasLehnfeld/flutter-version-number-action/actions/workflows/main.yaml) 
+
 📱 Github Action to read out version number of flutter project from pubspec.yaml
 
 ## Usage
