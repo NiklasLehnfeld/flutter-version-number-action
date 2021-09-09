@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: NiklasLehnfeld/flutter-version-number-action@master
+      - uses: ./../flutter-version-number-action
         with:
           file-path: example/pubspec.yaml
 
