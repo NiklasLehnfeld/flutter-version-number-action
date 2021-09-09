@@ -1,5 +1,9 @@
 name: flutter-version-number
 description: 'Reads the version number of the pubspec.yaml'
+author: NiklasLehnfeld
+branding:
+  icon: 'archive'
+  color: 'green'
 inputs:
   file-path:
     description: "Path to your pubspec.yaml. Default is ./pubspec.yaml"
