@@ -1,8 +1,8 @@
 on:
-  pull_request:
+  push:
     branches:
       - main
-name: PullRequest
+name: Test
 jobs:
   test:
     name: test
@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: read-version
-        uses: ./../flutter-version-number-action
+        uses: NiklasLehnfeld/flutter-version-number-action@main
         with:
           file-path: example/pubspec.yaml
       - uses: nick-invision/assert-action@v1
