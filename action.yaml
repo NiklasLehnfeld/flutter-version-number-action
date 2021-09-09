@@ -1,5 +1,10 @@
 name: flutter-version-number
 description: 'Reads the version number of the pubspec.yaml'
+inputs:
+  file-path:
+    description: "Path to your pubspec.yaml. Default is ./pubspec.yaml"
+    required: false
+    default: "./pubspec.yaml"
 outputs:
   version-number:
     description: "Version number"
@@ -9,6 +14,6 @@ runs:
   steps:
     - id: read-yaml
       run: |
-        VERSION=`cat pubspec.yaml | grep -o 'version:[^:]*' | cut -f2 -d":" | xargs`
+        VERSION=`cat ${{inputs.file-path}} | grep -o 'version:[^:]*' | cut -f2 -d":" | xargs`
         echo "::set-output name=version::$(echo $VERSION)"
       shell: bash
