@@ -1,0 +1,15 @@
+on:
+  pull_request:
+    branches:
+      - main
+name: PullRequest
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./flutter-version-number
+        with:
+          file-path: example/pubspec.yaml
+
