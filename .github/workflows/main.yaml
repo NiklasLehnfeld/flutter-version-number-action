@@ -1,7 +1,14 @@
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
+    # Inputs the workflow accepts.
+
+    inputs:
+      version:
+        # Friendly description to be shown in the UI instead of 'name'
+        description: 'Version'
+        # Input has to be provided for the workflow to run
+        required: true
+
 name: Test
 jobs:
   test:
