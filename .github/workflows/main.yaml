@@ -1,14 +1,14 @@
 on:
   workflow_dispatch:
-    inputs:
-      choice:
-        type: choice
-        description: Make a choice
-        required: true
-        options:
-          - foo
-          - bar
-          - baz
+#     inputs:
+#       choice:
+#         type: choice
+#         description: Make a choice
+#         required: true
+#         options:
+#           - foo
+#           - bar
+#           - baz
 
 name: Test
 jobs:
