@@ -19,5 +19,5 @@ runs:
     - id: read-yaml
       run: |
         VERSION=`cat ${{inputs.file-path}} | grep -o 'version:[^:]*' | cut -f2 -d":" | xargs`
-        echo "::set-output name=version::$(echo $VERSION)"
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
       shell: bash
