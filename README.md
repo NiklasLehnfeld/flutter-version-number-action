@@ -1,5 +1,6 @@
 # flutter-version-number-action
-[![Test](https://github.com/NiklasLehnfeld/flutter-version-number-action/actions/workflows/main.yaml/badge.svg)](https://github.com/NiklasLehnfeld/flutter-version-number-action/actions/workflows/main.yaml) 
+
+[![Test](https://github.com/blackfoot-makers/flutter-version-number-action/actions/workflows/main.yaml/badge.svg)](https://github.com/blackfoot-makers/flutter-version-number-action/actions/workflows/main.yaml)
 
 📱 Github Action to read out version number of flutter project from pubspec.yaml
 
@@ -18,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: read-version
-        uses: NiklasLehnfeld/flutter-version-number-action@main
+        uses: blackfoot-makers/flutter-version-number-action@main
         with:
           file-path: example/pubspec.yaml
       - uses: nick-invision/assert-action@v1
