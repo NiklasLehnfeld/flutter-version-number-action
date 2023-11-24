@@ -18,6 +18,6 @@ runs:
   steps:
     - id: read-yaml
       run: |
-        VERSION=`cat ${{inputs.file-path}} | grep -o 'version:[^:]*' | cut -f2 -d":" | xargs`
+        VERSION=`cat ${{inputs.file-path}} | grep -m 1 -o 'version:[^:]*' | cut -f2 -d":" | xargs`
         echo "::set-output name=version::$(echo $VERSION)"
       shell: bash
