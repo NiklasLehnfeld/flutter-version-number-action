@@ -1,9 +1,9 @@
 name: flutter-version-number
-description: 'Reads the version number of the pubspec.yaml'
+description: "Reads the version number of the pubspec.yaml"
 author: NiklasLehnfeld
 branding:
-  icon: 'archive'
-  color: 'green'
+  icon: "archive"
+  color: "green"
 inputs:
   file-path:
     description: "Path to your pubspec.yaml. Default is ./pubspec.yaml"
@@ -19,5 +19,5 @@ runs:
     - id: read-yaml
       run: |
         VERSION=`cat ${{inputs.file-path}} | grep -m 1 -o 'version:[^:]*' | cut -f2 -d":" | xargs`
-        echo "::set-output name=version::$(echo $VERSION)"
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
       shell: bash
